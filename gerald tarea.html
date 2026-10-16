@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO03 - Guía Básica HTML y XML [RETRO MODE]</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            line-height: 1.6;
+            color: #00ff66; 
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #0b0f0d;
+        }
+        header {
+            background: #111b14;
+            color: #00ff66;
+            padding: 20px;
+            border: 2px solid #00ff66;
+            text-align: center;
+            box-shadow: 4px 4px 0px #005522;
+        }
+        nav {
+            background: #111b14;
+            padding: 15px;
+            margin: 20px 0;
+            border: 2px dashed #00ff66;
+        }
+        nav h3 {
+            margin-top: 0;
+            color: #ffff00; 
+        }
+        nav ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        nav a {
+            color: #00ffff; 
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #ff00ff;
+        }
+        section {
+            background: #141c17;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid #00ff66;
+            box-shadow: 4px 4px 0px #004418;
+        }
+        h2 {
+            color: #ffff00;
+            border-bottom: 1px dashed #00ff66;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+        }
+        p, li {
+            color: #c0f0c0;
+        }
+        pre {
+            background: #000000;
+            color: #33ff33;
+            padding: 15px;
+            border: 1px solid #00ff66;
+            overflow-x: auto;
+            font-size: 13px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #00ff66;
+            padding: 10px;
+            text-align: left;
+            color: #c0f0c0;
+        }
+        th {
+            background-color: #1a2b20;
+            color: #ffff00;
+        }
+        .media-container {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #00aa44;
+            margin-top: 40px;
+            border-top: 1px dashed #00ff66;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>[Estructura, Modelos y Buenas Prácticas Web] </h1>
+    </header>
+
+    <!-- Índice Funcional -->
+    <nav>
+        <h3>> INDICE DE CONTENIDOS</h3>
+        <ul>
+            <li><a href="#perfil">> Reseña Académica y Profesional</a></li>
+            <li><a href="#intro">> 1. Introducción</a></li>
+            <li><a href="#bien-formado">> 2. Documento Bien Formado</a></li>
+            <li><a href="#infraestructura">> 3. Infraestructura del Documento</a></li>
+            <li><a href="#etiquetas">> 4. Etiquetas Populares de HTML</a></li>
+            <li><a href="#comparativa">> 5. Diferencias y Similitudes</a></li>
+            <li><a href="#ejemplos">> 6. Ejemplos Gráficos (HTML y XML)</a></li>
+        </ul>
+    </nav>
+
+    <!-- Reseña Académica -->
+    <section id="perfil">
+        <h2>Reseña Académica y Profesional</h2>
+        <p>Hola, mi nombre es Gerald y estoy en esta carrera para satisfacer mi fijación por los problemas de lógica y porque me gusta romperme la cabeza resolviéndolos.</p>
+        <p>Disfruto mucho de los videojuegos y la música.</p>
+        
+        <div class="media-container" style="text-align: center; margin-top: 20px;">
+            <a href="https://youtu.be/DTpksvCC-hg?si=UgLjXw3-FPcc6L73" target="_blank" style="display: inline-block; background-color: #00ff66; color: #000; padding: 10px 20px; text-decoration: none; border: 1px solid #fff; font-weight: bold; margin-bottom: 15px;">
+                [▶] EJECUTAR VIDEO EN YOUTUBE
+            </a>
+            <br>
+            <img src="C:\Users\Gerald\Pictures\Camera\20170206_064711-1-1.jpg" alt="Foto de Gerald" width="150" style="border: 2px solid #00ff66; padding: 3px; background: #000;">
+        </div>
+    </section>
+
+    <!-- Introducción -->
+    <section id="intro">
+        <h2>1. Introducción</h2>
+        <p>Los lenguajes de marcado son pilares fundamentales en la informática. HTML se enfoca en la presentación visual y estructuración de páginas web en el navegador, mientras que XML se especializa en almacenar, describir y transportar datos estructurados entre diferentes aplicaciones.</p>
+    </section>
+
+    <!-- Documento Bien Formado -->
+    <section id="bien-formado">
+        <h2>2. Definición de un Documento Bien Formado</h2>
+        <p>Un documento (HTML o XML) se considera bien formado si cumple con estas reglas:</p>
+        <ul>
+            <li>Debe poseer un único elemento raíz que contenga a todos los demás.</li>
+            <li>Todas las etiquetas abiertas deben cerrarse correctamente.</li>
+            <li>Las etiquetas deben anidarse de forma apropiada.</li>
+            <li>Sensibilidad a mayúsculas y minúsculas.</li>
+        </ul>
+    </section>
+
+    <!-- Infraestructura del Documento -->
+    <section id="infraestructura">
+        <h2>3. Infraestructura del Documento</h2>
+        <p>La infraestructura define el esqueleto básico que el intérprete procesa:</p>
+        <ul>
+            <li><strong>HTML:</strong> Utiliza el declarador de versión <code>&lt;!DOCTYPE html&gt;</code>, seguido del nodo raíz <code>&lt;html&gt;</code> que divide el contenido en <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>.</li>
+            <li><strong>XML:</strong> Opcionalmente inicia con una instrucción de procesamiento como <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code> y un nodo raíz personalizado.</li>
+        </ul>
+    </section>
+
+    <!-- Etiquetas Populares -->
+    <section id="etiquetas">
+        <h2>4. Etiquetas más Populares de HTML</h2>
+        <p>Las etiquetas más empleadas para construir la estructura web básica son:</p>
+        <ul>
+            <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>: Encabezados y jerarquía de títulos.</li>
+            <li><code>&lt;p&gt;</code>: Párrafos de texto.</li>
+            <li><code>&lt;a&gt;</code>: Enlaces e hipervínculos.</li>
+            <li><code>&lt;img&gt;</code>: Inserción de imágenes.</li>
+            <li><code>&lt;ul&gt;</code> / <code>&lt;li&gt;</code>: Listas desordenadas y elementos.</li>
+        </ul>
+    </section>
+
+    <!-- Diferencias y Similitudes -->
+    <section id="comparativa">
+        <h2>5. Diferencias y Similitudes entre HTML y XML</h2>
+        <table>
+            <tr>
+                <th>Característica</th>
+                <th>HTML</th>
+                <th>XML</th>
+            </tr>
+            <tr>
+                <td><strong>Propósito</strong></td>
+                <td>Visualizar información en la web.</td>
+                <td>Transportar y almacenar datos.</td>
+            </tr>
+            <tr>
+                <td><strong>Etiquetas</strong></td>
+                <td>Predefinidas y estandarizadas.</td>
+                <td>Personalizables creadas por el usuario.</td>
+            </tr>
+            <tr>
+                <td><strong>Similitudes</strong></td>
+                <td colspan="2">Ambos usan marcas angulares <code>&lt; &gt;</code>, soportan anidación jerárquica y comparten un origen común en SGML.</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Ejemplos Gráficos -->
+    <section id="ejemplos">
+        <h2>6. Ejemplos Gráficos de Autoría Propia</h2>
+        <p>Ejemplo básico de un archivo HTML:</p>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;title&gt;Mi Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <p>Ejemplo básico de un archivo XML:</p>
+        <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;estudiante&gt;
+    &lt;nombre&gt;Gerald Vindas&lt;/nombre&gt;
+    &lt;carrera&gt;Ingeniería en Computación&lt;/carrera&gt;
+&lt;/estudiante&gt;</pre>
+    </section>
+
+    <footer>
+        <p> Trabajo TO03 &bull; gerald &bull; 2026 [EOF]</p>
+    </footer>
+
+</body>
+</html>
